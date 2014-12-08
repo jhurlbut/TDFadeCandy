@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C6E89149-0C7C-46D4-9DCC-F80FE5AE9008}</ProjectGuid>
+    <RootNamespace>FadeCandyClient</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\..\FadeCandyCinderClient\src;$(CINDER_DIR)\include;$(CINDER_DIR)\boost;$(CINDER_DIR)\blocks\Cinder-Asio\src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"$(CINDER_DIR)\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder-$(PlatformToolset)_d.lib;..\libs\Spout32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>"$(CINDER_DIR)\lib\msw\$(PlatformTarget)"</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;LIBCPMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\..\FadeCandyCinderClient\src;"$(CINDER_DIR)\include";"$(CINDER_DIR)\boost";"$(CINDER_DIR)\blocks\Cinder-Asio\src";"$(CINDER_DIR)\blocks\FadeCandyClient\src"</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"$(CINDER_DIR)\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder-$(PlatformToolset).lib;..\libs\Spout32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>"$(CINDER_DIR)\lib\msw\$(PlatformTarget)"</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\ClientInterface.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\DispatcherInterface.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\ServerInterface.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\SessionInterface.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\TcpClient.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\TcpServer.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\TcpSession.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\UdpClient.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\UdpServer.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\UdpSession.cpp" />
+    <ClCompile Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\WaitTimer.cpp" />
+    <ClCompile Include="..\..\..\FadeCandyCinderClient\src\FCEffectRunner.cpp" />
+    <ClCompile Include="..\..\..\FadeCandyCinderClient\src\FCEffectVisualizer.cpp" />
+    <ClCompile Include="..\..\..\FadeCandyCinderClient\src\OPCClient.cpp" />
+    <ClCompile Include="..\src\FadeCandyClientApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\ClientInterface.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\DispatcherInterface.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\ServerInterface.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\SessionInterface.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\TcpClient.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\TcpServer.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\TcpSession.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\UdpClient.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\UdpServer.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\UdpSession.h" />
+    <ClInclude Include="$(CINDER_DIR)\blocks\Cinder-Asio\src\WaitTimer.h" />
+    <ClInclude Include="..\..\..\FadeCandyCinderClient\src\FCEffect.h" />
+    <ClInclude Include="..\..\..\FadeCandyCinderClient\src\FCEffectRunner.h" />
+    <ClInclude Include="..\..\..\FadeCandyCinderClient\src\FCEffectVisualizer.h" />
+    <ClInclude Include="..\..\..\FadeCandyCinderClient\src\OPCClient.h" />
+    <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\include\Spout.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
