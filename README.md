@@ -1,7 +1,7 @@
 TDFadeCandy
 ===========
 
-[![Led Portal](http://img.youtube.com/vi/nPB034gUK3IE/0.jpg)](http://www.youtube.com/watch?v=nPB034gUK3I)
+[![Led Portal](http://img.youtube.com/vi/nPB034gUK3I/0.jpg)](http://www.youtube.com/watch?v=nPB034gUK3I)
 
 Touch Designer to Fade Candy App using Spout 
 
